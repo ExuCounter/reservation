@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="iw" dir="rtl">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <title>נוף להר - הצהרת בריאות</title>
+      <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;900&display=swap" rel="stylesheet">
+      <link href="assets/css/bootstrap.min.css?v=1" rel="stylesheet" />
+      <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+      <link href="assets/css/style.css?v=2" rel="stylesheet" />
+   </head>
+   <body>
+      <div class="loader d-none">
+         <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+         </div>
+      </div>
+      <nav class="navbar fixed-top" id="mainNav">
+         <div class="container container-sm">
+            <div class="logo-header">
+               <a class="logo" href="http://mvv.co.il/"><img src="assets/img/logo.svg"> </a>
+            </div>
+         </div>
+      </nav>
+      <div class="container container-sm">
+         <div class="form-area">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="form-heading">
+                     <h2>הצהרת בריאות
+                        <span class="line-heading"><span></span></span>
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <p><b>אורח/ת יקר/ה,</b></p>
+                  <p>לאור התפשטות נגיף הקורונה ובהמשך להנחיית משרד הבריאות ולמדיניותה החדשה אנו פועלים למימוש ההנחיות ולשמירת בריאות כלל אורחינו. לפיכך הנך (בעל ההזמנה) נדרש למלא ולחתום על הצהרה זו לפני כניסתך. </p>
+               </div>
+            </div>
+            <form class="form-box" id="form-box" method="get">
+               <div class="row">
+                  <div class="col-md-12">
+					<p><b>הצהרה זו הינה עבורך ועבור כלל האורחים שבהזמנה.</b></p>
+					<p class="mb-0"><b>אנא סמן/י "כן"/"לא" במקום המיועד לכך:</b></p>
+                     <table class="table mb-0">
+                        <thead>
+                           <tr>
+                              <th></th>
+                              <th class="text-sm-center text-right pl-sm-3">כן</th>
+                              <th class="text-sm-center text-right pl-sm-3">לא</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr id="questionOne">
+                              <td class="pt-0">
+                                 <p class="mb-0 pt-0">א.	האם הנך אי מי מהאורחים חזר מחו"ל במהלך 14 הימים האחרונים?</p>
+                                 <p class="mb-0 text-danger d-none font-weight-600" id="questionOneError">סימון התשובה הינו חובה</p>
+                              </td>
+                              <td class="text-center"><input name="Yes" id="questionOneYes" type="checkbox"></td>
+                              <td class="text-center"><input name="No" id="questionOneNo" type="checkbox"></td>
+                           </tr>
+                           <tr id="questionTwo">
+                              <td class="pt-0">
+                                 <p class="mb-0 pt-0">ב.	האם מישהו מבני ביתך נמצא בבידוד ביתי?</p>
+                                 <p class="mb-0 text-danger d-none font-weight-600" id="questionTwoError">סימון התשובה הינו חובה</p>
+                              </td>
+                              <td class="text-center"><input value="Yes" id="questionTwoYes" type="checkbox"></td>
+                              <td class="text-center"><input value="No" id="questionTwoNo" type="checkbox"></td>
+                           </tr>
+                           <tr id="questionThree">
+                              <td class="pt-0">
+                                 <p class="mb-0 pt-0">ג.	האם הנך או מי מהאורחים נחשף למישהו החשוד כחולה או נשא קורונה? </p>
+                                 <p class="mb-0 text-danger d-none font-weight-600" id="questionThreeError">סימון התשובה הינו חובה</p>
+                              </td>
+                              <td class="text-center"><input value="Yes" id="questionThreeYes" type="checkbox"></td>
+                              <td class="text-center"><input value="No" id="questionThreeNo" type="checkbox"></td>
+                           </tr>
+                           <tr id="questionFour">
+                              <td class="pt-0">
+                            <p class="mb-0 pt-0">ד.	האם ככל הידוע לך, עליך או על מי מהאורחים לשעות בבידוד?</p>
+                                 <p class="mb-0 text-danger d-none font-weight-600" id="questionFourError">סימון התשובה הינו חובה</p>
+                              </td>
+                              <td class="text-center"><input value="Yes" id="questionFourYes" type="checkbox"></td>
+                              <td class="text-center"><input value="No" id="questionFourNo" type="checkbox"></td>
+                           </tr>
+                           <tr id="questionFive">
+                              <td class="pt-0">
+                                     <p class="mb-0 pt-0">ה.	האם הנך או מי מהאורחים סובל בימים אלו מחום / שיעול / קשיי נשימה?</p>
+                                 <p class="mb-0 text-danger d-none font-weight-600" id="questionFiveError">סימון התשובה הינו חובה</p>
+                              </td>
+                              <td class="text-center"><input value="Yes" id="questionFiveYes" type="checkbox"></td>
+                              <td class="text-center"><input value="No" id="questionFiveNo" type="checkbox"></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <!-- Row Ends -->
+               <div class="row mt-2">
+                  <div class="col-md-12">
+                     <ul class="text-nav">
+                        <li class="mb-2">אני הח"מ מצהיר/ה כי ערכתי היום בדיקה למדידת חום הגוף שלי ושל כלל האורחים שבהזמנה, בה נמצא כי חום הגוף שלי ושל כלל האורחים אינו עולה על 37.5 מעלות צלזיוס.</li>
+                        <li class="mb-2">אני הח"מ מצהיר/ה כי אינני משתעל/ת, וכי אין לי קשיים בנשימה וכן לכלל האורחים שבהזמנה זו.</li>
+                        <li class="mb-2">אני הח"מ מצהיר/ה בזאת כי הפרטים שמסרתי נכונים להיום ומציגים באור מלא את המצב הרפואי שלי ושל כלל הארוחים שבהזמנה.</li>
+                        <li class="mb-2">ידוע לי כי העלמת מידע והצהרה לא נכונה הינה עבירה על החוק ועלולה להביא לעונשים הכתובים בחוק.</li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- Row Ends -->
+               <div class="row mt-2">
+                  <div class="form-group col-md-4">
+                     <label>שם פרטי </label>
+                     <input type="text" id="firstName" class="form-control">
+                     <p class="mb-0 text-danger d-none font-weight-600" id="firstNameError">שדה חובה</p>
+                  </div>
+                  <div class="form-group col-md-4">
+                     <label>שם משפחה</label>
+                     <input type="text" id="lastName" class="form-control">
+                     <p class="mb-0 text-danger d-none font-weight-600" id="lastNameError">שדה חובה</p>
+                  </div>
+                  <div class="form-group col-md-4">
+                     <label>מספר תעודת זהות </label>
+                     <input type="text" id="idNumber" class="form-control">
+                     <p class="mb-0 text-danger d-none font-weight-600" id="idNumberError">שדה חובה</p>
+                     <p class="mb-0 text-danger d-none font-weight-600" id="idNumberValidateError">שדה ספרות בלבד</p>
+                  </div>
+                  <div class="form-group col-md-8">
+                     <label>כתובת מלאה </label>
+                     <input type="text" class="form-control" id="fullAddress">
+                     <p class="mb-0 text-danger d-none font-weight-600" id="fullAddressError">שדה חובה</p>
+                  </div>
+                  <div class="form-group col-md-4">
+                     <label>תאריך</label>
+                     <input type="text" id="datepick" readonly="true" disabled="true" class="form-control">
+                     <p class="mb-0 text-danger d-none font-weight-600" id="datepickError">שדה חובה</p>
+                  </div>
+                  <div class="form-group in-sign col-md-12" id="signImg">
+                     <label>חתימה – בשם כלל הארוחים  </label>
+                     <input type="text" class="form-control" id="txt">
+                  </div>
+                  <div class="form-group in-sign col-md-12">
+                     <p class="mb-0 text-danger d-none font-weight-600" id="signImgError">שדה חובה הקלק על הקוביה כדי לחתום</p>
+                  </div>
+               </div>
+               <!-- Row Ends -->
+               <div class="row mt-2">
+                  <div class="form-group col-md-12">
+                     <input type="button" id="submitButton" value="שלח טופס" class="btn btn-primary">
+                  </div>
+                  <div class="form-group col-md-12" role="alert">
+                     <div class="alert alert-success d-none" id="success-alert" role="alert">
+                        תודה, הטופס נשלח בהצלחה.
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div> <!-- // form-area -->
+      </div> <!-- // Container ends -->
+	  
+	  
+      <!-- Bootstrap core JS-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.2/i18n/jquery.ui.datepicker-ar.min.js"></script>
+      <script src="assets/js/datepicker-he.js"></script>
+      <script src="assets/js/scripts.js?v=2"></script>
+      <script src="assets/js/covid19.js?v=2"></script>
+   </body>
+</html>

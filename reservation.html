@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="hr" dir="rtl">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <title>נוף להר - טופס הזמנה</title>
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!-- <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script> -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+      <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+      <link href="assets/css/style.css?v=6" rel="stylesheet" />
+      <link href="assets/css/header.css?v=8" rel="stylesheet" />
+   </head>
+   <body class='reservation-page'>
+      <div class="loader d-none">
+         <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+         </div>
+      </div>
+      <div id="wrapper-container w-100" class="wrapper-container">
+         <div class="content-pusher">
+            <header class="site-header affix-top bg-custom-sticky sticky-header header_v1">
+               <div class="container">
+                  <div class="row">
+                     <div class="navigation col-sm-12">
+                        <div class="tm-table">
+                           <div class="menu-mobile-effect navbar-toggle" data-effect="mobile-effect">
+                              <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                           </div>
+                           <a href="tel:077-220-0065" class="u-head-mb-call-ic fa fa-phone d-block d-sm-none" aria-hidden="true"></a>
+                           <div class="width-logo table-cell sm-logo">
+                              <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="no-sticky-logo no-mobile-logo">
+                                 <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                 <img class=" lazyloaded" src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                              </a>
+                              <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="sticky-logo no-mobile-logo">
+                                 <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                 <img class="lazyload" src="https://cdn.shortpixel.ai/client/q_lqip,ret_wait/https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                              </a>
+                              <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="mobile-logo">
+                                 <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                 <img class=" ls-is-cached lazyloaded" src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                              </a>
+                           </div>
+                           <nav class="width-navigation table-cell table-right">
+                              <div class="top-header">
+                                 <aside id="text-15" class="u-header-call widget widget_text">
+                                    <div class="textwidget">
+                                       <div class="textwidget u-head-call">
+                                          <div class="u-head-call__el u-head-call__label">חייגו</div>
+                                          <a href="tel:077-220-0065" class="value u-head-call__el u-head-call-num"> 077-220-0065 <i class="fa fa-phone" aria-hidden="true"></i> </a>
+                                       </div>
+                                    </div>
+                                 </aside>
+                              </div>
+                              <div class="inner-navigation">
+                                 <div class="header-right"></div>
+                                 <ul class="nav navbar-nav menu-main-menu">
+                                    <li id="menu-item-4058" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-4038 current_page_item menu-item-4058 tc-menu-item tc-menu-depth-0 tc-menu-align-left tc-menu-layout-default">
+                                       <a href="https://mvv.co.il/" class="tc-menu-inner"><span>בית</span></a>
+                                    </li>
+                                    <li id="menu-item-4056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4056 tc-menu-item tc-menu-depth-0 tc-menu-align-left tc-menu-layout-default">
+                                       <a href="https://mvv.co.il/about-us/" class="tc-menu-inner"><span>עלינו</span></a>
+                                    </li>
+                                    <li id="menu-item-4579" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4579 tc-menu-item tc-menu-depth-0 tc-menu-align-left tc-menu-layout-default">
+                                       <a href="https://mvv.co.il/reservation/" class="tc-menu-inner reservation-tab"><span>טופס הזמנה</span></a>
+                                    </li>
+                                    <li id="menu-item-4473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4473 tc-menu-item tc-menu-depth-0 tc-menu-align-left tc-menu-layout-default">
+                                       <a href="https://app.upay.co.il/API6/clientsecure/redirectpage.php?msg=UHhHelhmUXdaS3YxUUlXUW9iNzRLQ0MxQll2MjNtRm9KT3Nnc2ExMUFpZ3preW9xclQzWSs5YnNRS3J2ZjNwNW44a29qdWY0QUtwbjZHYVR6Yk5BVjVzdk04WUJrMGJkS1U0NXZWTmFMWUpXdk43bFFDbWduZmF1eGtwS2trVTAequal" target="_blank" class="tc-menu-inner"><span>תשלום אונליין</span></a>
+                                    </li>
+                                    <li id="menu-item-4470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4470 tc-menu-item tc-menu-depth-0 tc-menu-align-left tc-menu-layout-default">
+                                       <a href="https://mvv.co.il/contact-us/" class="tc-menu-inner"><span>צור קשר</span></a>
+                                    </li>
+                                 </ul>
+                                 <div class="header-left"></div>
+                              </div>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <div class="container container-sm">  
+               <div class="form-area">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="form-heading">
+                           <h2>טופס הזמנה 
+                              <span class="line-heading"><span></span></span>
+                           </h2>
+                           <p class="m-0">תודה שבחרת בנוף להר לחופשה הבאה שלך.</p>
+                           <p>אנא מלא/י את טופס ההזמנה הקצר כדי לשריין את התאריכים שברצונך להזמין - בסיום התהליך ישלח אליך עותק לכתובת המייל שברשותך. </p>
+                        </div>
+                     </div>
+                  </div>
+                  <form class="form-box" id="form-box" method="get">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h3 class="form-sub-heading">פרטים אישיים</h3>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>שם פרטי</label>
+                           <input  type="text" id="firstName" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="firstNameError">שדה חובה</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>שם משפחה</label>
+                           <input type="text" id="lastName" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="lastNameError">שדה חובה</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>טלפון נייד</label>
+                           <input type="text" id="mobileNumber" class="form-control" maxlength="10">
+                           <div class="text-danger d-none font-weight-600" id="mobileNumberError">שדה חובה</div>
+                           <div class="text-danger d-none font-weight-600" id="mobileNumberValidateError">מספר הטלפון אינו תקין</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>כתובת מייל</label>
+                           <input type="text" id="mailAddress" class="form-control email">
+                           <div class="text-danger d-none font-weight-600" id="mailAddressError">שדה חובה</div>
+                           <div class="text-danger d-none font-weight-600" id="mailAddressValidateError">כתובת הדוא"ל אינה תקינה</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>כתובת מגורים</label>
+                           <input type="text" id="city" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="cityError">שדה חובה</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>עיר מגורים</label>
+                           <input type="text" id="address" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="addressError">שדה חובה</div>
+                        </div>
+                     </div>
+                     <!-- Row Ends -->
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h3 class="form-sub-heading">פרטי הזמנה</h3>
+                        </div>
+                        <div class="form-group col-md-12">
+                           <div class="roomType">
+                              <p id="roomType" class="mb-0">בחר את סוג החדר:</p>
+                              <label for="roomTypeTwo"><input id="roomTypeTwo" class="rmtype" name="roomType" type="checkbox">  סוויטת 2 חדרי שינה <a class="link" href="https://mvv.co.il/rooms/two-bedroom/" target="_blank"> צפה בסוויטה </a></label>
+                              <label for="roomTypeOne"><input id="roomTypeOne" class="rmtype" name="roomType" type="checkbox">  סוויטת חדר שינה אחד <a class="link" href="https://mvv.co.il/rooms/one-bedroom/" target="_blank"> צפה בסוויטה </a></label> 
+                              <div class="text-danger d-none font-weight-600" id="roomTypeError">בחר את סוג החדר שברצונך להזמין</div>
+                           </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>מספר מבוגרים</label>
+                           <input type="text" id="adult" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="adultError">שדה חובה</div>
+                           <div class="text-danger d-none font-weight-600" id="adultValidateError">שדה ספרות בלבד</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>מספר ילדים</label>
+                           <input type="text" class="form-control" id="children">
+                           <div class="text-danger d-none font-weight-600" id="childrenError">שדה חובה</div>
+                           <div class="text-danger d-none font-weight-600" id="childrenValidateError">שדה ספרות בלבד</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>תאריך הגעה</label>
+                           <input type="text" id="datepick2" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="datepick2Error">בחר תאריך הגעה</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>תאריך עזיבה</label>
+                           <input type="text" id="datepick" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="datepickError">בחר תאריך עזיבה</div>
+                           <div class="text-danger d-none font-weight-600" id="datepickValidateError">תאריך העזיבה אינו תקין</div>
+                        </div>
+                        <div class="form-group col-md-12">
+                           <label>בקשות מיוחדות</label>
+                           <textarea class="form-control" id="message"></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
+                           <label for="callDetails">
+                              <input type="checkbox" name="callDetails" id="callDetails">אני מעוניין/ת לקבל פרטי התקשרות של ספקי שירות מהם אוכל להזמין באופן ישיר ארוחות בוקר ו/ואו שירותי עיסוי (אופציונלי).
+                           </label>
+                        </div>
+                     </div>
+                     <!-- Row Ends -->
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h3 class="form-sub-heading">אמצעי תשלום</h3>
+                        </div>
+                        <div class="form-group col-md-12">
+                           <p class="mb-0">אנו דורשים אמצעי תשלום כעת לצורך שריון ההזמנה ולביטחון בלבד, בכפוף <a class="js-scroll-trigger p-0 link" href="#">למדיניות ביטול ההזמנה</a> שלנו.</p>
+                           <p>כרטיסך יחוייב בסכום ההזמנה אך ורק לאחר הגעתך למקום בזמן הצ'ק אין.</p>
+                        </div>
+                        <div class="form-group col-md-4">
+                           <label>סכום ההזמנה</label>
+                           <input type="text" id="orderAmount" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="orderAmountError">שדה חובה</div>
+                           <div class="text-danger d-none font-weight-600" id="orderAmountValidateError">שדה ספרות בלבד</div>
+                        </div>
+                        <div class="form-group col-md-4">
+                           <label>שם בעל הכרטיס</label>
+                           <input type="text" class="form-control" id="cardHolderName">
+                           <div class="text-danger d-none font-weight-600" id="cardHolderNameError">שדה חובה</div>
+                        </div>
+                        <div class="form-group col-md-4">
+                           <label>תעודת זהות</label>
+                           <input type="text" class="form-control" id="cardId">
+                           <div class="text-danger d-none font-weight-600" id="cardIdError">שדה חובה</div>
+                           <div class="text-danger d-none font-weight-600" id="cardIdValidateError">שדה ספרות בלבד</div>
+                        </div>
+                        <div class="form-group col-md-4">
+                           <label>מספר הכרטיס</label>
+                           <div>
+                              <input type="text" placeholder="1234 5678 9012 3456" class="form-control text-left card-number" id="cardNumber">
+                           </div>
+                           <div class="text-danger d-none font-weight-600" id="cardNumberError">שדה חובה</div>
+                           <div class="text-danger d-none font-weight-600" id="cardNumberValidateError">מספר כרטיס האשראי אינו תקין</div>
+                        </div> 
+                        <div class="form-group col-md-4">
+                           <div class="row">
+                             <label class="col-sm-12">תוקף</label>
+                              <div class="col-6 no-pd-y">
+                                 <select class="form-control" id="expiryYear" name="expiration-date-year"></select>
+                                 <i class="fi-play dropdown-triangle" aria-hidden="true"></i>
+                              </div>
+                              <div class="col-6 no-pd-m">
+                                 <select class="form-control" name="expiration-date-month" id="expiryMonth">
+                                    <option  value="">חודש</option>
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option> 
+                                 </select>
+                                 <i class="fi-play dropdown-triangle" aria-hidden="true"></i>
+                              </div>
+                              <div class="col-6">
+                                 <div class="text-danger font-weight-600 d-none" id="expiryYearError">שדה חובה</div>
+                              </div>
+                              <div class="col-6 no-pd-m">
+                                 <div class="text-danger font-weight-600 d-none" id="expiryMonthError">שדה חובה</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                           <label>קוד אבטחה <span class="font-13">(CVV)</span></label>
+                           <input type="text" id="cvv" class="form-control" maxlength="4">
+                           <div class="text-danger d-none font-weight-600" id="cvvError">שדה חובה</div>
+                           <div class="text-danger d-none font-weight-600" id="cvvValidateError">שדה ספרות בלבד</div>
+                           <div class="text-danger d-none font-weight-600" id="cvvMissingFieldError">מספר חסר</div>
+                        </div>
+                        <div class="form-group col-md-12">
+                           <p><i class="fa fa-lock"></i> עמוד זה מאובטח ומוצפן בפרוטוקל SSL – המידע שלך בטוח. </p>
+                        </div>
+                     </div>
+                     <!-- Row Ends -->
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h3 class="form-sub-heading mb-2">המדיניות שלנו</h3>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="accordion" id="exampleAccordion">
+                              <div class="card">
+                                 <div class="card-header" id="exItem1Header">
+                                    <h5 class="mb-0">
+                                       <button type="button" class="btn btn-link btn-sm float-left toggle-collapse"><i class="fa fa-minus collapse-icon"></i></button>
+                                       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#exItem1" aria-expanded="true" aria-controls="exItem1">ביצוע הזמנה</button>
+                                    </h5>
+                                 </div>
+                                 <div id="exItem1" class="collapse show" aria-labelledby="exItem1Header">
+                                    <div class="card-body">
+                                       תהליך ביצוע ההזמנה הנו פשוט וקל, הנך נדרש לתאם עמנו <a href="tel:077-220-0065" class="link">בטלפון</a> או <a href="https://wa.me/972772200065" target="_blank" class="link wa-color">בווטסאפ</a> את תאריכי ההזמנה המבוקשים, עם וידוא תאריכי ההזמנה והסכמתך להצעה המחיר מאתנו תתבקש/י למלא ולחתום על טופס הזמנה, בסיום מילוי הטופס ישלח אלייך עותק לכתובת המייל שברשותך. מילוי טופס ההזמנה
+                                       ללא תאום מראש ואישור סטטוס ההזמנה על ידנו אינו מהווה אישור הזמנה.
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="card" id="drop-here">
+                                 <div class="card-header" id="exItem2Header">
+                                    <h5 class="mb-0">
+                                       <button type="button" class="btn btn-link btn-sm float-left toggle-collapse"><i class="fa fa-minus collapse-icon"></i></button>
+                                       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#exItem2" aria-expanded="true" aria-controls="exItem2">ביטול הזמנה </button>
+                                    </h5>
+                                 </div>
+                                 <div id="exItem2" class="collapse show" aria-labelledby="exItem2Header">
+                                    <div class="card-body">ע"פ <a class="link" href="https://www.consumers.org.il/category/cancelling-vacation" target="_blank">החוק להגנת הצרכן</a>, הנך רשאי/ת לבטל את ההזמנה בכתב בלבד תוך 14 ימי עסקים מיום ביצוע ההזמנה בעלות דמי ביטול של 5% או 100 ש"ח – הנמוך מבניהם, ובתנאי שביטול ההזמנה אינו חל בתוך 7 הימים הקודמים למועד הגעתך. <br/><br/>                                                אנו משקיעים את מירב המאמצים לשמירת מקומך והבטחת חווית השהיה שלך, ביטול ההזמנה לאחר 14 ימי עסקים מיום ביצוע ההזמנה או בתוך 7 ימי עסקים הקודמים למועד הגעתך, יחויבו דמי ביטול בעלות 35% מסך ההזמנה. במקרים חריגים
+                                       של ביטול מצדנו, אנו נעשה את מירב המאמצים להציע חלופות לשביעות רצונך. בכל מקרה של ביטול הזמנה כתוצאה מכוח עליון, מלחמה, או מגפה אנו נפעל ע"פ הנחיית הרשויות ודמי הביטול לא יחויבו כלל.
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="card">
+                                 <div class="card-header" id="exItem3Header">
+                                    <h5 class="mb-0">
+                                       <button type="button" class="btn btn-link btn-sm float-left toggle-collapse"><i class="fa fa-minus collapse-icon"></i></button>
+                                       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#exItem3" aria-expanded="false" aria-controls="exItem3">זמני הגעה ויציאה</button>
+                                    </h5>
+                                 </div>
+                                 <div id="exItem3" class="collapse show" aria-labelledby="exItem3Header">
+                                    <div class="card-body">כניסה ליחידות האירוח תתאפשר ביום האירוח הראשון החל מהשעה 15:00, היציאה הינה ביום האירוח האחרון עד השעה 12:00. עזיבה במוצאי שבת הינה בתאום מראש ובתוספת תשלום של 200 ש"ח.</div>
+                                 </div>
+                              </div>
+                              <div class="card">
+                                 <div class="card-header" id="exItem3Header">
+                                    <h5 class="mb-0">
+                                       <button type="button" class="btn btn-link btn-sm float-left toggle-collapse"><i class="fa fa-minus collapse-icon"></i></button>
+                                       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#exItem4" aria-expanded="false" aria-controls="exItem4">כללי התנהגות </button>
+                                    </h5>
+                                 </div>
+                                 <div id="exItem4" class="collapse show" aria-labelledby="exItem4Header">
+                                    <div class="card-body">
+                                       <ul>
+                                          <li>חל איסור מוחלט על עישון סיגריות ו/או נרגילות בתוך יחידות הנופש. </li>
+                                          <li>לנוחיותך ניתן להשתמש במנגל הקיים במתחם, <b>אין להבעיר אש במהלך השבת.</b></li>
+                                          <li>יחידות הנופש מוגדרת כיחידות שקטות ובאזור מגורים, אין לקיים מסיבות, הכנסת ציוד הגברה או השמעת מוזיקה רועשת. האורחים מתבקשים לשמור על השקט לאחר השעה 23:00. </li>
+                                          <li>אין לצרף אנשים נוספים לחדר או למתחם. הכניסה לבעלי חיים אינה מותרת. </li>
+                                          <li>אין לקחת מגבות או חפצים אחרים מחוץ למתחם. יש לשמור על תקינות הציוד במתחם ולהודיע על כל נזק שנגרם שלא במתכוון, נזקים שיגרמו מרשלנות, וונדליזם או במתכוון יחויבו בתשלום. </li>
+                                          <li>השימוש בג'קוזי ושמירה על כללי הזהירות הינם באחריות האורחים בלבד. </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="card">
+                                 <div class="card-header" id="exItem3Header">
+                                    <h5 class="mb-0">
+                                       <button type="button" class="btn btn-link btn-sm float-left toggle-collapse"><i class="fa fa-minus collapse-icon"></i></button>
+                                       <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#exItem5" aria-expanded="false" aria-controls="exItem5">שירותים ואביזרים במתחם</button>
+                                    </h5>
+                                 </div>
+                                 <div id="exItem5" class="collapse show" aria-labelledby="exItem5Header">
+                                    <div class="card-body">
+                                       <ul>
+                                          <li>מנגל חיצוני לשימוש האורחים.</li>
+                                          <li>טלוויזיות עם חיבור לערוצי הכבלים. </li>
+                                          <li>הוספת מזרנים, מיטות נפתחות ו/או מיטות תינוק תתאפשר בתאום מראש.</li>
+                                          <li>היחידות מותאמות לשומרי שבת: בית כנסת במרחק הליכה קצר, מחם ופלטת שבת זמינים לשירותכם.</li>
+                                          <li>מטבח מאובזר הכולל בר מים, כיריים חשמליים, אובן גריל, מקרר, מיקרוגל וערכת קפה לשימושכם.</li>
+                                          <li>חלוקי רחצה יסופקו בהתאם למספר המבוגרים בהזמנה. </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Row Ends -->
+                     <div class="row">
+                        <div class="col-md-12">
+                           <h4 class="mini-heading">נגיף הקורונה</h4>
+                        </div>
+                        <div class="form-group col-md-12">
+                           <p>ע"פ הנחיות משרד הבריאות הנך נדרש לחתום על טופס הצהרת בריאות עם הגעתך למתחם. אנו נשלח אלייך מייל נפרד ביום הגעתך אותו תוכל למלא ולחתום באופן דיגיטלי מהטלפון או המחשב. </p>
+                        </div>
+                        <div class="form-group col-md-12">
+                           <label for="policy"><input type="checkbox" class="plcy" name="policy" id="policy">אני מאשר/ת שקראתי את מדיניות ההזמנה ואני מסכים/ה לה.</label>
+                           <div class="text-danger d-none font-weight-600" id="policyError">שדה סימון חובה</div>
+                        </div>
+                     </div>
+                     <!-- Row Ends -->
+                     <div class="row mt-50">
+                        <div class="form-group col-md-6">
+                           <label>שם</label>
+                           <input type="text" id="signTxt" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="signTxtError">שדה חובה</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                           <label>תאריך</label>
+                           <input type="text" id="datepick3" readonly="true" disabled="true" class="form-control">
+                           <div class="text-danger d-none font-weight-600" id="datepick3Error">שדה חובה</div>
+                        </div>
+                        <div class="form-group in-sign col-md-12" id="signImg">
+                           <label>חתימה</label>
+                           <input type="text" class="form-control" id="txt">
+                        </div>
+                        <div class="form-group in-sign col-md-12">
+                           <div class="text-danger d-none font-weight-600" id="signImgError">שדה חובה הקלק על הקוביה כדי לחתום</div>
+                        </div>
+                     </div>
+                     <!-- Row Ends -->
+                     <div class="row mt-30">
+                        <div class="form-group col-md-12">
+                           <input type="button" id="submitButton" value="שלח טופס" class="btn btn-primary">
+                        </div>
+                        <div class="form-group col-md-12" role="alert">
+                           <div class="alert alert-success d-none" id="success-alert" role="alert">
+                              תודה, הטופס נשלח בהצלחה.
+                           </div>
+                        </div>
+                        <div class="form-group col-md-12" role="alert">
+                           <div class="alert alert-danger d-none" id="error-alert" role="alert">
+                              משהו השתבש אנא נסה שוב מאוחר יותר או צור עמנו קשר בטלפון 077-220-0065
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         document.getElementById("cardNumber").style.backgroundPosition = '3px -168px,'+(document.getElementById('cardNumber').clientWidth-25)+'px'+' -75px';
+      </script>
+      <!-- // Container ends -->
+      <!-- Bootstrap core JS-->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery-ui.min.js"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/jquery.easing.min.js"></script>
+      <script src="assets/js/jquery.ui.datepicker-ar.min.js"></script>
+      <script src="assets/js/datepicker-he.js"></script>
+      <script src="assets/js/scripts.js?v=2"></script>
+      <script src="assets/js/reservation.js?v=20"></script>
+      <script src="assets/js/jquery.creditCardValidator.js?v=1"></script>
+   </body>
+</html>

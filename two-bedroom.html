@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="hr" dir="rtl">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- TITLE -->
+    <title>Two Bedroom - MVV</title>
+
+    <!-- 3RD-PARTY SCRIPTS -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+
+    <!-- PLAIN CSS -->
+    <link href="assets/css/style.css?v=6" rel="stylesheet" />
+    <link href="assets/css/header.css?v=8" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- OUR ROOMS -->
+    <link rel="stylesheet" href="assets/css/rooms.css">
+
+    <!-- SLICK SLIDER -->
+    <link rel="stylesheet" type="text/css" href='libs/slick/slick/slick-theme.css'>
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick/slick.css" />
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/img/favicon-sm.png" sizes="32x32">
+    <link rel="icon" href="assets/img/favicon-md.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+
+</head>
+
+<!-- BODY -->
+
+<body class='reservation-page'>
+    <div class="loader d-none">
+        <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div id="wrapper-container w-100" class="wrapper-container">
+        <div class="content-pusher">
+            <header class="site-header affix-top bg-custom-sticky sticky-header header_v1">
+                <div class="container">
+                    <div class="row">
+                        <div class="navigation col-sm-12">
+                            <div class="tm-table">
+                                <div class="menu-mobile-effect navbar-toggle" data-effect="mobile-effect">
+                                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                                </div>
+                                <a href="tel:077-220-0065" class="u-head-mb-call-ic fa fa-phone d-block d-sm-none" aria-hidden="true"></a>
+                                <div class="width-logo table-cell sm-logo">
+                                    <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="no-sticky-logo no-mobile-logo">
+                                        <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                        <img class=" lazyloaded" src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                                    </a>
+                                    <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="sticky-logo no-mobile-logo">
+                                        <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                        <img class="lazyload" src="https://cdn.shortpixel.ai/client/q_lqip,ret_wait/https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                                    </a>
+                                    <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="mobile-logo">
+                                        <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                        <img class=" ls-is-cached lazyloaded" src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                                    </a>
+                                </div>
+                                <nav class="width-navigation table-cell table-right">
+                                    <div class="top-header">
+                                        <aside id="text-15" class="u-header-call widget widget_text">
+                                            <div class="textwidget">
+                                                <div class="textwidget u-head-call">
+                                                    <div class="u-head-call__el u-head-call__label">חייגו</div>
+                                                    <a href="tel:077-220-0065" class="value u-head-call__el u-head-call-num"> 077-220-0065 <i class="fa fa-phone" aria-hidden="true"></i> </a>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                    </div>
+                                    <div class="inner-navigation">
+                                        <div class="header-right"></div>
+                                        <ul class="nav navbar-nav menu-main-menu">
+                                            <li>
+                                                <a href="/"><span>בית</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/about-us/"><span>עלינו</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/reservation/"><span>טופס הזמנה</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://app.upay.co.il/API6/clientsecure/redirectpage.php?msg=UHhHelhmUXdaS3YxUUlXUW9iNzRLQ0MxQll2MjNtRm9KT3Nnc2ExMUFpZ3preW9xclQzWSs5YnNRS3J2ZjNwNW44a29qdWY0QUtwbjZHYVR6Yk5BVjVzdk04WUJrMGJkS1U0NXZWTmFMWUpXdk43bFFDbWduZmF1eGtwS2trVTAequal" target="_blank"
+                                                    class="tc-menu-inner"><span>תשלום אונליין</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/contact-us/"><span>צור קשר</span></a>
+                                            </li>
+                                        </ul>
+                                        <div class="header-left"></div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MAIN SECTION -->
+            <div class="form-area">
+
+                <!-- ROOM HEADER -->
+                <div class="room-header room-header__one-room">
+                    <h1 class="room-header__title">
+                        נוף הרים
+                    </h1>
+                </div>
+
+                <div class="container container-sm">
+                    <!-- ROOM SLIDER -->
+
+                    <div class='d-flex room-slider__heading'>
+                        <h2 class="room-slider__title">
+                            <a href="/two-bedroom.html">Two Bedroom</a>
+                        </h2>
+                        <div class="d-flex align-items-center">
+                            <span class="room-slider__title-price">Price:</span>
+                            <span class="room-slider__price">$0.0</span>
+                            <span class="room-slider__per">לַיְלָה</span>
+                        </div>
+                    </div>
+
+                    <div class="room-slider" dir='ltr'>
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                    </div>
+
+                    <div class="room-slider__thumb" dir='ltr'>
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                        <img src="assets/img/one-room.jpg" alt="Room image">
+                    </div>
+
+                    <!-- ROOM INFO -->
+
+                    <div class="room-info">
+                        <ul class="nav nav-pills room-info__tabs">
+                            <li class="active">
+                                <a data-toggle="pill" href="#description">Description</a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#pricing-plans">Pricing Plans</a>
+                            </li>
+                        </ul>
+
+                        <div class="room-info__tabs-content">
+                            <div id="description" class='tab-pane active'>
+                                <div class='d-flex room-info__tabs-content__inner'>
+                                    <div>
+                                        <p>
+                                            <span>
+                                                Bed : 1 double bed<br>
+                                                Occupancy : 1 adult<br>
+                                                Location : 1st to 5th floor<br>
+                                                Size : Approximately 20 m²<br>
+                                                Bathroom : Shower bath<br>
+                                            </span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            <br> Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
+                                            amet risus nibh Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac blandit Maecenas sed diam eget risus varius blandit sit amet non magna.
+                                            Fusce dapibus, tellus ac blandit tempus.
+                                            <br> Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
+                                            amet risus nibh Curabitur blandit tempus porttitor.
+                                            <br> Maecenas sed diam eget risus varius blandit sit amr. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac blandit tempu
+                                        </p>
+                                    </div>
+                                    <div class="room-info__tabs-content__features">
+                                        <h4>Room Amenities</h4>
+                                        <ul>
+                                            <li><i class="thim-color fa fa-check-circle"></i>Private bathroom</li>
+                                            <li><i class="thim-color fa fa-check-circle"></i>Free Wifi</li>
+                                            <li><i class="thim-color fa fa-check-circle"></i>Beach View</li>
+                                            <li><i class="thim-color fa fa-check-circle"></i>Free Lunch</li>
+                                            <li><i class="thim-color fa fa-check-circle"></i>Hot/Cold Shower &amp; Bathtub</li>
+                                            <li><i class="thim-color fa fa-check-circle"></i>Writing Desk &amp; Chair</li>
+                                            <li><i class="thim-color fa fa-check-circle"></i>2 pair of slippers</li>
+                                            <li><i class="thim-color fa fa-check-circle"></i>Bottled Mineral Water</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pricing-plans" class='tab-pane'>
+                                <table class="room-info__tabs-content__table">
+                                    <thead>
+                                        <tr>
+                                            <th>Sun</th>
+                                            <th>Mon</th>
+                                            <th>Tue</th>
+                                            <th>Wed</th>
+                                            <th>Thu</th>
+                                            <th>Fri</th>
+                                            <th>Sat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> $0.0</td>
+                                            <td> $0.0</td>
+                                            <td> $0.0</td>
+                                            <td> $0.0</td>
+                                            <td> $0.0</td>
+                                            <td> $0.0</td>
+                                            <td> $0.0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- ROOM -->
+                        <section class="our-rooms our-rooms__one-room">
+                            <h2 class="our-rooms__title">
+                                Other Rooms
+                            </h2>
+                            <span class="line-heading"><span></span></span>
+
+                            <div class="row our-rooms__row">
+                                <div class="col-md-12 our-rooms__row-block">
+                                    <div class='our-rooms__row-block__inner'>
+                                        <img src="assets/img/one-room.jpeg" alt="Two rooms" class='room-img'>
+                                        <div class="our-rooms__types">
+                                            <a class='our-rooms__types-type' href='/one-bedroom.html'>
+                                            One Bedroom
+                                        </a>
+                                            <span>
+                                            חדר 1
+                                        </span>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="our-rooms__info">
+                                                <span class="our-rooms__info-per">
+                                                night/
+                                            </span>
+                                                <span class="our-rooms__info-number">
+                                                $0.0
+                                            </span>
+                                                <span class="our-rooms__info-price">
+                                                Price
+                                            </span>
+                                            </div>
+                                            <a href="/two-bedroom.html" class='our-rooms__info-link'>
+                                            More info
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-12 footer-contact__col">
+                            <img src="assets/img/logo-monogram.png" alt="Logo" class='footer-logo'>
+                            <p class='footer-contact__col-text'> טלפון.
+                                <a href="tel:077-220-0065">077-220-0065</a>
+                                <br> אימייל.
+                                <a href="mailto:info@mvv.co.il">info@mvv.co.il</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-12 footer-menu__col">
+                            <ul class="footer-menu">
+                                <li>
+                                    <a href="/about-us">עלינו</a>
+                                </li>
+                                <li>
+                                    <a href="/reservation">טופס הזמנה</a>
+                                </li>
+                                <li>
+                                    <a href="https://app.upay.co.il/API6/s.php?m=N0JyUUlCR2RzOHFrT2g1cDRmdHZyZz09">תשלום אונליין</a>
+                                </li>
+                                <li>
+                                    <a href="https://mvv.co.il/contact-us/">עלינו</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-12 footer-icons__col">
+                            <img src="assets/img/icons/booking_gray.svg" alt="Footer Icon" class='footer-icon'>
+                            <img src="assets/img/icons/easy_gray.svg" alt="Footer Icon" class='footer-icon'>
+                            <img src="assets/img/icons/google_gray.svg" alt="Footer Icon" class='footer-icon'>
+                            <img src="assets/img/icons/group_GRAY.svg" alt="Footer Icon" class='footer-icon'>
+                            <img src="assets/img/icons/resort_gray.svg" alt="Footer Icon" class='footer-icon'>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <div class="footer-copyright__text">
+                            ©
+                            <a href="https://mvv.co.il/" ref="nofollow">
+                            נוף להר
+                        </a> 2020. כל הזכויות שמורות.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- // Container ends -->
+        <!-- Bootstrap core JS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="libs/slick/slick/slick.min.js"></script>
+
+        <script>
+            $('.room-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                asNavFor: '.room-slider__thumb',
+                swipe: false,
+                speed: 1000
+            });
+            $('.room-slider__thumb').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.room-slider',
+                focusOnSelect: true,
+                swipe: false,
+                arrows: true,
+                speed: 1000,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 578,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }]
+            });
+        </script>
+
+        <script>
+            document.querySelectorAll('.room-info__tabs li').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.room-info__tabs li').forEach(tab => {
+                        tab.classList.remove('active');
+                    })
+                    tab.classList.add('active');
+                    if (tab.querySelector('a').href == '#description') {
+                        document.querySelector('#description').classList.add('active');
+                        document.querySelector('#pricing-plans').classList.remove('active');
+                    } else if (tab.querySelector('a').href == '#pricing-plans') {
+                        document.querySelector('#description').classList.remove('active');
+                        document.querySelector('#pricing-plans').classList.add('active');
+                    }
+                })
+            })
+        </script>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js'></script>
+</body>
+
+</html>

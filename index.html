@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="hr" dir="rtl">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- TITLE -->
+    <title>נוף להר - טופס הזמנה</title>
+
+    <!-- 3RD-PARTY SCRIPTS -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+
+    <!-- PLAIN CSS -->
+    <link href="assets/css/style.css?v=6" rel="stylesheet" />
+    <link href="assets/css/header.css?v=8" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- HOME CSS -->
+    <link rel="stylesheet" href="assets/css/home.css">
+
+    <!-- OUR ROOMS -->
+    <link rel="stylesheet" href="assets/css/rooms.css">
+
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+    <!-- WEATHER ICONS -->
+    <link rel="stylesheet" href="libs/weather-icons/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="libs/weather-icons/css/weather-icons.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/img/favicon-sm.png" sizes="32x32">
+    <link rel="icon" href="assets/img/favicon-md.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+
+</head>
+
+<!-- BODY -->
+
+<body class='reservation-page'>
+    <div class="loader d-none">
+        <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div id="wrapper-container w-100" class="wrapper-container">
+        <div class="content-pusher">
+            <header class="site-header affix-top bg-custom-sticky sticky-header header_v1">
+                <div class="container">
+                    <div class="row">
+                        <div class="navigation col-sm-12">
+                            <div class="tm-table">
+                                <div class="menu-mobile-effect navbar-toggle" data-effect="mobile-effect">
+                                    <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                                </div>
+                                <a href="tel:077-220-0065" class="u-head-mb-call-ic fa fa-phone d-block d-sm-none" aria-hidden="true"></a>
+                                <div class="width-logo table-cell sm-logo">
+                                    <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="no-sticky-logo no-mobile-logo">
+                                        <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                        <img class=" lazyloaded" src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                                    </a>
+                                    <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="sticky-logo no-mobile-logo">
+                                        <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                        <img class="lazyload" src="https://cdn.shortpixel.ai/client/q_lqip,ret_wait/https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                                    </a>
+                                    <a href="https://mvv.co.il/" title="MVV - Mountain View Vacation" rel="home" class="mobile-logo">
+                                        <noscript>
+                                    <img src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV" />
+                                 </noscript>
+                                        <img class=" ls-is-cached lazyloaded" src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" data-src="https://mvv.co.il/wp-content/uploads/2020/06/logo.png" alt="MVV">
+                                    </a>
+                                </div>
+                                <nav class="width-navigation table-cell table-right">
+                                    <div class="top-header">
+                                        <aside id="text-15" class="u-header-call widget widget_text">
+                                            <div class="textwidget">
+                                                <div class="textwidget u-head-call">
+                                                    <div class="u-head-call__el u-head-call__label">חייגו</div>
+                                                    <a href="tel:077-220-0065" class="value u-head-call__el u-head-call-num"> 077-220-0065 <i class="fa fa-phone" aria-hidden="true"></i> </a>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                    </div>
+                                    <div class="inner-navigation">
+                                        <div class="header-right"></div>
+                                        <ul class="nav navbar-nav menu-main-menu">
+                                            <li>
+                                                <a href="/"><span>בית</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/about-us/"><span>עלינו</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/reservation/"><span>טופס הזמנה</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://app.upay.co.il/API6/clientsecure/redirectpage.php?msg=UHhHelhmUXdaS3YxUUlXUW9iNzRLQ0MxQll2MjNtRm9KT3Nnc2ExMUFpZ3preW9xclQzWSs5YnNRS3J2ZjNwNW44a29qdWY0QUtwbjZHYVR6Yk5BVjVzdk04WUJrMGJkS1U0NXZWTmFMWUpXdk43bFFDbWduZmF1eGtwS2trVTAequal" target="_blank"
+                                                    class="tc-menu-inner"><span>תשלום אונליין</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="/contact-us/"><span>צור קשר</span></a>
+                                            </li>
+                                        </ul>
+                                        <div class="header-left"></div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- MAIN SECTION -->
+
+            <div class="form-area">
+
+                <div class="home-slider">
+                    <div class="home-slider__inner owl-theme owl-carousel">
+                        <div class="home-slider__inner-slide" style='background: url(assets/img/slider-1.jpg)'>
+                            <div class="container">
+                                <h2 class="home-slider__inner-slider__title">
+                                    ברוך הבא למלון שיט
+                                </h2>
+                                <p class="home-slider__inner-slider__desc">
+                                    שם כל שהות היא ייחודית.
+                                </p>
+                                <div class='d-flex justify-content-md-start justify-content-center '>
+                                    <a href="javascript:void(0)" class="home-slider__inner-slider__button">
+                                        חקור 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-slider__inner-slide" style='background: url(assets/img/slider-2.jpg)'>
+                            <div class="container">
+                                <h2 class="home-slider__inner-slider__title">
+                                    ברוך הבא למלון שיט
+                                </h2>
+                                <p class="home-slider__inner-slider__desc">
+                                    שם כל שהות היא ייחודית.
+                                </p>
+                                <a href="javascript:void(0)" class="home-slider__inner-slider__button">
+                                    חקור 
+                                </a>
+                            </div>
+                        </div>
+                        <div class="home-slider__inner-slide" style='background: url(assets/img/slider-3.jpg)'>
+                            <div class="container">
+                                <h2 class="home-slider__inner-slider__title">
+                                    ברוך הבא למלון שיט
+                                </h2>
+                                <p class="home-slider__inner-slider__desc">
+                                    שם כל שהות היא ייחודית.
+                                </p>
+                                <a href="javascript:void(0)" class="home-slider__inner-slider__button">
+                                    חקור 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HOME FORM -->
+                <form action="#" class="home-form">
+                    <div class="container">
+                        <div class='home-form__inputs-container'>
+                            <div class='home-form__inputs'>
+                                <label><input type="text" name='your-name' class='home-form__name' placeholder="שם"></label>
+                                <label><input type="email" name='your-email' class='home-form__email' placeholder="אימייל"></label>
+                                <label><input type="tel" name='your-phone' class='home-form__phone' inputmode="tel" placeholder="טלפון"></label>
+                                <label><input type="number" name='your-guests' class='home-form__guests' inputmode="tel" placeholder="מספר אורחים"></label>
+                                <label class='home-form__arrival-label'><input type="text" name='arrival-date' class='home-form__arrival' id='home-arrive' placeholder="תאריך הגעה"></label>
+                                <label class='home-form__departure-label'><input type="text" name='departure-date' class='home-form__departure' id='home-departure' placeholder="תאריך עזיבה"></label>
+                            </div>
+                            <div class='home-form__submit'>
+                                <input type="submit" value='בדוק זמינות'>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="container container-sm">
+
+                    <!-- ROOMS -->
+                    <section class="our-rooms">
+                        <h2 class="our-rooms__title">
+                            החדרים שלנו
+                        </h2>
+                        <p class="our-rooms__desc">
+                            מרוהטת לחלוטין עם שירותים באיכות גבוהה
+                        </p>
+                        <span class="line-heading"><span></span></span>
+
+                        <div class="row our-rooms__row">
+                            <div class="col-md-6 our-rooms__row-block mb-5">
+                                <div class='our-rooms__row-block__inner'>
+                                    <img src="assets/img/one-room.jpeg" alt="One room" class='room-img'>
+                                    <div class="our-rooms__types">
+                                        <a class='our-rooms__types-type' href='/one-bedroom.html'>
+                                            One Bedroom
+                                        </a>
+                                        <span>
+                                            חדר 1
+                                        </span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="our-rooms__info">
+                                            <span class="our-rooms__info-per">
+                                                night/
+                                            </span>
+                                            <span class="our-rooms__info-number">
+                                                $0.0
+                                            </span>
+                                            <span class="our-rooms__info-price">
+                                                Price
+                                            </span>
+                                        </div>
+                                        <a href="/one-bedroom.html" class='our-rooms__info-link'>
+                                            More info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 our-rooms__row-block">
+                                <div class='our-rooms__row-block__inner'>
+                                    <img src="assets/img/two-rooms.jpg" alt="Two rooms" class='room-img'>
+                                    <div class="our-rooms__types">
+                                        <a class='our-rooms__types-type' href='/one-bedroom.html'>
+                                            Two Bedroom
+                                        </a>
+                                        <span>
+                                            חדר 1
+                                        </span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="our-rooms__info">
+                                            <span class="our-rooms__info-per">
+                                                night/
+                                            </span>
+                                            <span class="our-rooms__info-number">
+                                                $0.0
+                                            </span>
+                                            <span class="our-rooms__info-price">
+                                                Price
+                                            </span>
+                                        </div>
+                                        <a href="/two-bedroom.html" class='our-rooms__info-link'>
+                                            More info
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- HOME PARALLAX -->
+            <section class="home-parallax">
+                <div class="home-parallax__banner">
+                    <p class="home-parallax__banner-title">יץ רד הוט</p>
+                    <p class="home-parallax__banner-heading">חסכון</p>
+                    <p class="home-parallax__banner-off">50% הנחה על הלילה השלישי</p>
+                    <p class="home-parallax__banner-more">
+                        <a href="#home-slider">למד עוד</a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- THINGS TO DO-->
+            <div class="things-to-do">
+                <div class="container">
+                    <div class='things-to-do__heading'>
+                        <h2 class="things-to-do__title">
+                            דברים לעשות
+                        </h2>
+                        <span class="line-heading"><span></span></span>
+                    </div>
+                    <div class="things-to-do__row row">
+                        <div class="things-to-do__row-block col-md-4 col-12">
+                            <div class="things-to-do__row-block__img-container">
+                                <img src="assets/img/things-to-do-1.jpg" alt="Thing to do">
+                            </div>
+                            <span class="things-to-do__row-block__title">
+                                זו תיבת איקונים
+                            </span>
+                            <p>
+                                כתוב תיאור קצר, שיתאר את הכותרת או משהו מידע שימושי.
+                            </p>
+                        </div>
+                        <div class="things-to-do__row-block col-md-4 col-12">
+                            <div class="things-to-do__row-block__img-container">
+                                <img src="assets/img/things-to-do-2.jpg" alt="Thing to do">
+                            </div>
+                            <span class="things-to-do__row-block__title">
+                                זו תיבת איקונים
+                            </span>
+                            <p>
+                                כתוב תיאור קצר, שיתאר את הכותרת או משהו מידע שימושי.
+                            </p>
+                        </div>
+                        <div class="things-to-do__row-block col-md-4 col-12">
+                            <div class="things-to-do__row-block__img-container">
+                                <img src="assets/img/things-to-do-3.jpg" alt="Thing to do">
+                            </div>
+                            <span class="things-to-do__row-block__title">
+                                זו תיבת איקונים
+                            </span>
+                            <p>
+                                כתוב תיאור קצר, שיתאר את הכותרת או משהו מידע שימושי.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOME WIDGETS -->
+            <div class="home-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 weather-widget pl-md-5">
+                            <h5 class="home-widgets-title">
+                                תחזית מזג האוויר
+                            </h5>
+                            <div class="weather-widget__inner">
+                                <div class='weather-widget__inner_dark'>
+                                    <div class="weather-widget__title"><span>שלומי, ישראל</span></div>
+
+                                    <div class="weather-widget__icon">
+                                        <i class="wi wi-owm-802"></i>
+                                    </div>
+
+                                    <div class="weather-widget__current-temp">
+                                        <strong>31<sup>°</sup></strong>
+                                    </div>
+
+                                    <div class="weather-widget__stats">
+                                        <div class="weather-widget_desc">עננים בודדים</div>
+                                        <div class="weather-widget__humidty">62% לחות</div>
+                                        <div class="weather-widget__wind"> 5m/s N רוּחַ</div>
+                                        <div class="weather-widget__highlow">H 31 • L 31</div>
+                                    </div>
+
+                                    <div class="weather-widget__forecast">
+                                        <div class="weather-widget__forecast-day">
+                                            <i class="wi wi-owm-801"></i>
+                                            <div class="weather-widget__forecast-day-temp">30<sup>°</sup></div>
+                                            <div class="weather-widget__forecast-day-abbr">יוֹם רִאשׁוֹן</div>
+                                        </div>
+                                        <div class="weather-widget__forecast-day">
+                                            <i class="wi wi-owm-800"></i>
+                                            <div class="weather-widget__forecast-day-temp">29<sup>°</sup></div>
+                                            <div class="weather-widget__forecast-day-abbr">יוֹם שְׁלִישִׁי</div>
+                                        </div>
+                                        <div class="weather-widget__forecast-day">
+                                            <i class="wi wi-owm-800"></i>
+                                            <div class="weather-widget__forecast-day-temp">29<sup>°</sup></div>
+                                            <div class="weather-widget__forecast-day-abbr">יום רביעי</div>
+                                        </div>
+                                        <div class="weather-widget__forecast-day">
+                                            <i class="wi wi-owm-800"></i>
+                                            <div class="weather-widget__forecast-day-temp">29<sup>°</sup></div>
+                                            <div class="weather-widget__forecast-day-abbr">יוֹם חֲמִישִׁי</div>
+                                        </div>
+                                        <div class="weather-widget__forecast-day">
+                                            <i class="wi wi-owm-800"></i>
+                                            <div class="weather-widget__forecast-day-temp">30<sup>°</sup></div>
+                                            <div class="weather-widget__forecast-day-abbr">יוֹם שִׁישִׁי</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-12 testimonial-widget mt-md-0 mt-5">
+                            <h5 class="home-widgets-title">
+                                המלצות
+                            </h5>
+                            <div>
+                                <div class="home-testimonials owl-carousel owl-theme">
+                                    <div class="testimonial-widget__item">
+                                        <div class="testimonial-widget__item-content">
+                                            אתה חושב שמים זזים מהר? אתה צריך לראות קרח. זה נע כאילו יש לו שכל. כאילו שהוא יודע זה הרג את העולם פעם אחת וקיבל טעם לרצח. אחרי המפולת, לקח לנו שבוע לטפס החוצה. </div>
+                                        <div class="testimonial-widget__item-footer">
+                                            <img src="assets/img/testimonial1.jpg" alt="peter-packer">
+                                            <div class="testimonial-widget__item-footer__info">
+                                                <a href="https://www.google.com/"> משתמש וורדפרס </a>
+                                                <p class="testimonial-widget__item-footer__desc">מנכ"ל Touristlink</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-widget__item">
+                                        <div class="testimonial-widget__item-content">
+                                            אתה חושב שמים זזים מהר? אתה צריך לראות קרח. זה נע כאילו יש לו שכל. כאילו שהוא יודע זה הרג את העולם פעם אחת וקיבל טעם לרצח. אחרי המפולת, לקח לנו שבוע לטפס החוצה. עכשיו, אני לא יודע בדיוק מתי הדלקנו זה את זה, אבל אני יודע ששבעה מאיתנו שרדו את השקופית. </div>
+                                        <div class="testimonial-widget__item-footer">
+                                            <img src="assets/img/testimonial3.jpg" alt="review people">
+                                            <div class="testimonial-widget__item-footer__info">
+                                                <a href="https://www.google.com/"> מומחה להזמנת מלונות </a>
+                                                <p class="testimonial-widget__item-footer__desc">מנהל זכויות היוצרים של פובלה</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-widget__item">
+                                        <div class="testimonial-widget__item-content">
+                                            אתה חושב שמים זזים מהר? אתה צריך לראות קרח. זה נע כאילו יש לו שכל. כאילו שהוא יודע זה הרג את העולם פעם אחת וקיבל טעם לרצח. אחרי המפולת, לקח לנו שבוע לטפס החוצה. </div>
+                                        <div class="testimonial-widget__item-footer">
+                                            <img src="assets/img/testimonial2.jpg" alt="review people">
+                                            <div class="testimonial-widget__item-footer__info">
+                                                <a href="https://www.google.com/"> משתמש במלון  </a>
+                                                <p class="testimonial-widget__item-footer__desc">סאואר מתימפרס</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-12 footer-contact__col">
+                            <img src="assets/img/logo-monogram.png" alt="Logo" class='footer-logo'>
+                            <p class='footer-contact__col-text'> טלפון.
+                                <a href="tel:077-220-0065">077-220-0065</a>
+                                <br> אימייל.
+                                <a href="mailto:info@mvv.co.il">info@mvv.co.il</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-12 footer-menu__col">
+                            <ul class="footer-menu">
+                                <li>
+                                    <a href="/about-us">עלינו</a>
+                                </li>
+                                <li>
+                                    <a href="/reservation">טופס הזמנה</a>
+                                </li>
+                                <li>
+                                    <a href="https://app.upay.co.il/API6/s.php?m=N0JyUUlCR2RzOHFrT2g1cDRmdHZyZz09">תשלום אונליין</a>
+                                </li>
+                                <li>
+                                    <a href="https://mvv.co.il/contact-us/">עלינו</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-12 footer-icons__col">
+                            <img src="assets/img/icons/booking_gray.svg" alt="Footer Icon" class='footer-icon'>
+                            <img src="assets/img/icons/easy_gray.svg" alt="Footer Icon" class='footer-icon'>
+                            <img src="assets/img/icons/google_gray.svg" alt="Footer Icon" class='footer-icon'>
+                            <img src="assets/img/icons/group_GRAY.svg" alt="Footer Icon" class='footer-icon'>
+                            <img src="assets/img/icons/resort_gray.svg" alt="Footer Icon" class='footer-icon'>
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <div class="footer-copyright__text">
+                            ©
+                            <a href="https://mvv.co.il/" ref="nofollow">
+                                נוף להר
+                            </a> 2020. כל הזכויות שמורות.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <!-- // Container ends -->
+    <!-- Bootstrap core JS-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="libs/bgscroll.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.ui.datepicker-ar.min.js"></script>
+    <script src="assets/js/datepicker-he.js"></script>
+    <script src="assets/js/scripts.js?v=2"></script>
+    <script src="assets/js/reservation.js?v=20"></script>
+    <script src="assets/js/jquery.creditCardValidator.js?v=1"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- PARALLAX EFFECT ON HOME PAGE BG -->
+
+    <script>
+        $(window).scroll(function() {
+            $('.home-parallax').bgscroll({
+                direction: 'bottom',
+                bgpositionx: 0,
+                debug: false,
+                min: 0,
+                max: 200
+            });
+        })
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.home-testimonials').owlCarousel({
+                rtl: true,
+                loop: true,
+                margin: 10,
+                items: 1,
+                arrows: false,
+                dots: true,
+                pagination: true
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.home-slider__inner').owlCarousel({
+                rtl: true,
+                items: 1,
+                loop: true,
+                arrows: true,
+                dots: false,
+                mouseDrag: false,
+                touchDrag: false,
+                nav: true,
+                navSpeed: 2000
+            });
+        });
+    </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js'></script>
+</body>
+
+</html>

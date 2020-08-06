@@ -1,0 +1,23 @@
+{
+  "name": "Kinly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error:npm i --save-dev gulp-sass no test specified\" && exit 1",
+    "scss": "node-sass --watch assets/scss -o assets/style"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-server-livereload": "^1.9.2",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.7",
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1"
+  }
+}

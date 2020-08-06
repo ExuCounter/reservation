@@ -1,0 +1,11 @@
+/********************************************
+* Please Follow below setups which are used 
+	setup Mysql, 
+	SMTP, Cron, and Owner Email Configuration
+*********************************************/
+- Create reservation table in MySql(query is added in reservation.sql)
+- Update servername, username, password and dbname variable in database.php
+- Update $cronRuningTime in /modules/cron.php for time configuration 
+- Add cron.php in cpnale cronJob
+- Update SMTP_USERNAME, SMTP_PASSWORD, SMTP_HOST, setFrom, AddReplyTo to variables
+- In api/reservation.php and convid19.php please update owner email address
