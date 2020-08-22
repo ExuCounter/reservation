@@ -347,33 +347,33 @@
 
                                     <div class="weather-widget__stats">
                                         <div class="weather-widget_desc">עננים בודדים</div>
-                                        <div class="weather-widget__humidty">62% לחות</div>
-                                        <div class="weather-widget__wind"> 5m/s N רוּחַ</div>
-                                        <div class="weather-widget__highlow">H 31 • L 31</div>
+                                        <div class="weather-widget__humidty"><span>62</span>% לחות</div>
+                                        <div class="weather-widget__wind"> <span>5</span>m/s N רוּחַ</div>
+                                        <!-- <div class="weather-widget__highlow">H 31 • L 31</div> -->
                                     </div>
 
                                     <div class="weather-widget__forecast">
-                                        <div class="weather-widget__forecast-day">
+                                        <div class="weather-widget__forecast-day weather-5">
                                             <i class="wi wi-owm-801"></i>
                                             <div class="weather-widget__forecast-day-temp">30<sup>°</sup></div>
                                             <div class="weather-widget__forecast-day-abbr">יוֹם רִאשׁוֹן</div>
                                         </div>
-                                        <div class="weather-widget__forecast-day">
+                                        <div class="weather-widget__forecast-day weather-4">
                                             <i class="wi wi-owm-800"></i>
                                             <div class="weather-widget__forecast-day-temp">29<sup>°</sup></div>
                                             <div class="weather-widget__forecast-day-abbr">יוֹם שְׁלִישִׁי</div>
                                         </div>
-                                        <div class="weather-widget__forecast-day">
+                                        <div class="weather-widget__forecast-day weather-3">
                                             <i class="wi wi-owm-800"></i>
                                             <div class="weather-widget__forecast-day-temp">29<sup>°</sup></div>
                                             <div class="weather-widget__forecast-day-abbr">יום רביעי</div>
                                         </div>
-                                        <div class="weather-widget__forecast-day">
+                                        <div class="weather-widget__forecast-day weather-2">
                                             <i class="wi wi-owm-800"></i>
                                             <div class="weather-widget__forecast-day-temp">29<sup>°</sup></div>
                                             <div class="weather-widget__forecast-day-abbr">יוֹם חֲמִישִׁי</div>
                                         </div>
-                                        <div class="weather-widget__forecast-day">
+                                        <div class="weather-widget__forecast-day weather-1">
                                             <i class="wi wi-owm-800"></i>
                                             <div class="weather-widget__forecast-day-temp">30<sup>°</sup></div>
                                             <div class="weather-widget__forecast-day-abbr">יוֹם שִׁישִׁי</div>
@@ -493,6 +493,51 @@
     <script src="assets/js/jquery.creditCardValidator.js?v=1"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        let weatherUrlApi = 'https://api.openweathermap.org/data/2.5/onecall?lat=33.072609&lon=35.145945&exclude=hourly,minutely&units=metric&appid=61af42b963b4a4b898042369019e0331';
+
+        fetch(weatherUrlApi)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+                document.querySelector('.weather-widget__current-temp').innerHTML = `<strong>${data.current.temp}<sup>°</sup></strong>`;
+                document.querySelector('.weather-widget__humidty span').innerHTML = `${data.current.humidity}`;
+                document.querySelector('.weather-widget__wind span').innerHTML = `${data.current.wind_speed}`;
+
+                document.querySelector('.weather-1').innerHTML = `
+                    <i class="wi wi-owm-${data.daily[0].weather[0].id}"></i>
+                        <div class="weather-widget__forecast-day-temp">${parseInt(data.daily[0].temp.day)}<sup>°</sup></div>
+                    <div class="weather-widget__forecast-day-abbr">יוֹם שִׁישִׁי</div>
+                `
+
+                document.querySelector('.weather-2').innerHTML = `
+                    <i class="wi wi-owm-${data.daily[1].weather[0].id}"></i>
+                        <div class="weather-widget__forecast-day-temp">${parseInt(data.daily[1].temp.day)}<sup>°</sup></div>
+                    <div class="weather-widget__forecast-day-abbr">יוֹם שִׁישִׁי</div>
+                `
+
+                document.querySelector('.weather-3').innerHTML = `
+                    <i class="wi wi-owm-${data.daily[2].weather[0].id}"></i>
+                        <div class="weather-widget__forecast-day-temp">${parseInt(data.daily[2].temp.day)}<sup>°</sup></div>
+                    <div class="weather-widget__forecast-day-abbr">יוֹם שִׁישִׁי</div>
+                `
+
+                document.querySelector('.weather-4').innerHTML = `
+                    <i class="wi wi-owm-${data.daily[3].weather[0].id}"></i>
+                        <div class="weather-widget__forecast-day-temp">${parseInt(data.daily[3].temp.day)}<sup>°</sup></div>
+                    <div class="weather-widget__forecast-day-abbr">יוֹם שִׁישִׁי</div>
+                `
+
+                document.querySelector('.weather-5').innerHTML = `
+                    <i class="wi wi-owm-${data.daily[4].weather[0].id}"></i>
+                        <div class="weather-widget__forecast-day-temp">${parseInt(data.daily[4].temp.day)}<sup>°</sup></div>
+                    <div class="weather-widget__forecast-day-abbr">יוֹם שִׁישִׁי</div>
+                `
+            });
+    </script>
 
     <!-- PARALLAX EFFECT ON HOME PAGE BG -->
 
