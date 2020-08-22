@@ -503,7 +503,7 @@
             })
             .then((data) => {
                 console.log(data);
-                document.querySelector('.weather-widget__current-temp').innerHTML = `<strong>${data.current.temp}<sup>°</sup></strong>`;
+                document.querySelector('.weather-widget__current-temp').innerHTML = `<strong>${parseInt(data.current.temp)}<sup>°</sup></strong>`;
                 document.querySelector('.weather-widget__humidty span').innerHTML = `${data.current.humidity}`;
                 document.querySelector('.weather-widget__wind span').innerHTML = `${data.current.wind_speed}`;
 
