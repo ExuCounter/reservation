@@ -479,6 +479,61 @@
 
         </div>
     </div>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/phonenumber" class="float float-whatsapp-btn" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <div class="whatsapp-block hide">
+        <div class="whatsapp-block__header">
+            <div class='whatsapp-block__close'></div>
+        </div>
+        <div class="whatsapp-block__message">
+            <div class="whatsapp-block__message-text">
+                שאלות, בירורים והזמנות.<br>לשירותכם, גם בווטסאפ.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let closeWhatsAppBtn = document.querySelector('.whatsapp-block__close');
+        let whatsAppBlock = document.querySelector('.whatsapp-block');
+        let floatWhatsAppBtn = document.querySelector('.float-whatsapp-btn');
+
+        floatWhatsAppBtn.onclick = (e) => {
+            if (!(floatWhatsAppBtn.classList.contains('active'))) {
+                e.preventDefault();
+                whatsAppBlock.classList.remove('hide');
+                floatWhatsAppBtn.classList.add('active');
+
+                floatWhatsAppBtn.innerHTML = `
+                    <span class="whatsapp-send-text">התחל צ'אט</span>
+                `;
+            } else {
+                whatsAppBlock.classList.add('hide');
+                floatWhatsAppBtn.classList.remove('active');
+
+                floatWhatsAppBtn.innerHTML = `
+                    <i class="fa fa-whatsapp my-float"></i>
+                `;
+            }
+        }
+
+        closeWhatsAppBtn.onclick = () => {
+            if (!whatsAppBlock.classList.contains('hide')) {
+                whatsAppBlock.classList.add('hide');
+                floatWhatsAppBtn.classList.remove('active');
+
+                floatWhatsAppBtn.innerHTML = `
+                    <i class="fa fa-whatsapp my-float"></i>
+                `;
+            } else {
+                whatsAppBlock.classList.remove('hide');
+            }
+        }
+    </script>
+
     <!-- // Container ends -->
     <!-- Bootstrap core JS-->
     <script src="assets/js/jquery.min.js"></script>
